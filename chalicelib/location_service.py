@@ -4,6 +4,6 @@ def information_about(place):
     if place == "Oxford":
         return "Oxford is home to the University of Oxford, the oldest university in the English-speaking world"
     if place == "Watford":
-        return "Boaring town in Hertfordshire"
+        return "Town in Hertfordshire"
 
     return f"Unknown place: {place}"
