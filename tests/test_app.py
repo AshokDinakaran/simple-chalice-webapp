@@ -13,6 +13,13 @@ def test_london_is_recognised():
         assert "capital" in actual
 
 
+def test_watford_is_recognised():
+    with Client(app) as client:
+        response = client.http.get('/location?place=Watford')
+        actual = response.body.decode("UTF-8")
+        assert "Town" in actual
+        assert "Hertfordshire" in actual
+
 def test_unknown_is_handled():
     with Client(app) as client:
         unknown_place = random_string()
